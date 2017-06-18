@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B854DFC51EF7489B00984974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854DFC41EF7489B00984974 /* AppDelegate.swift */; };
+		B854DFC71EF7489B00984974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854DFC61EF7489B00984974 /* ViewController.swift */; };
+		B854DFC91EF7489B00984974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B854DFC81EF7489B00984974 /* Assets.xcassets */; };
+		B854DFCC1EF7489B00984974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B854DFCA1EF7489B00984974 /* Main.storyboard */; };
+		B854DFD71EF7489B00984974 /* LeafViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854DFD61EF7489B00984974 /* LeafViewerTests.swift */; };
+		B854DFE21EF7489B00984974 /* LeafViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854DFE11EF7489B00984974 /* LeafViewerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B854DFD31EF7489B00984974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B854DFB91EF7489B00984974 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B854DFC01EF7489B00984974;
+			remoteInfo = LeafViewer;
+		};
+		B854DFDE1EF7489B00984974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B854DFB91EF7489B00984974 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B854DFC01EF7489B00984974;
+			remoteInfo = LeafViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B854DFC11EF7489B00984974 /* LeafViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeafViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B854DFC41EF7489B00984974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B854DFC61EF7489B00984974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B854DFC81EF7489B00984974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B854DFCB1EF7489B00984974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B854DFCD1EF7489B00984974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B854DFD21EF7489B00984974 /* LeafViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeafViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B854DFD61EF7489B00984974 /* LeafViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafViewerTests.swift; sourceTree = "<group>"; };
+		B854DFD81EF7489B00984974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B854DFDD1EF7489B00984974 /* LeafViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeafViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B854DFE11EF7489B00984974 /* LeafViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafViewerUITests.swift; sourceTree = "<group>"; };
+		B854DFE31EF7489B00984974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B854DFBE1EF7489B00984974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B854DFCF1EF7489B00984974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B854DFDA1EF7489B00984974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B854DFB81EF7489B00984974 = {
+			isa = PBXGroup;
+			children = (
+				B854DFC31EF7489B00984974 /* LeafViewer */,
+				B854DFD51EF7489B00984974 /* LeafViewerTests */,
+				B854DFE01EF7489B00984974 /* LeafViewerUITests */,
+				B854DFC21EF7489B00984974 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B854DFC21EF7489B00984974 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B854DFC11EF7489B00984974 /* LeafViewer.app */,
+				B854DFD21EF7489B00984974 /* LeafViewerTests.xctest */,
+				B854DFDD1EF7489B00984974 /* LeafViewerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B854DFC31EF7489B00984974 /* LeafViewer */ = {
+			isa = PBXGroup;
+			children = (
+				B854DFC41EF7489B00984974 /* AppDelegate.swift */,
+				B854DFC61EF7489B00984974 /* ViewController.swift */,
+				B854DFC81EF7489B00984974 /* Assets.xcassets */,
+				B854DFCA1EF7489B00984974 /* Main.storyboard */,
+				B854DFCD1EF7489B00984974 /* Info.plist */,
+			);
+			path = LeafViewer;
+			sourceTree = "<group>";
+		};
+		B854DFD51EF7489B00984974 /* LeafViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B854DFD61EF7489B00984974 /* LeafViewerTests.swift */,
+				B854DFD81EF7489B00984974 /* Info.plist */,
+			);
+			path = LeafViewerTests;
+			sourceTree = "<group>";
+		};
+		B854DFE01EF7489B00984974 /* LeafViewerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B854DFE11EF7489B00984974 /* LeafViewerUITests.swift */,
+				B854DFE31EF7489B00984974 /* Info.plist */,
+			);
+			path = LeafViewerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B854DFC01EF7489B00984974 /* LeafViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B854DFE61EF7489B00984974 /* Build configuration list for PBXNativeTarget "LeafViewer" */;
+			buildPhases = (
+				B854DFBD1EF7489B00984974 /* Sources */,
+				B854DFBE1EF7489B00984974 /* Frameworks */,
+				B854DFBF1EF7489B00984974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeafViewer;
+			productName = LeafViewer;
+			productReference = B854DFC11EF7489B00984974 /* LeafViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B854DFD11EF7489B00984974 /* LeafViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B854DFE91EF7489B00984974 /* Build configuration list for PBXNativeTarget "LeafViewerTests" */;
+			buildPhases = (
+				B854DFCE1EF7489B00984974 /* Sources */,
+				B854DFCF1EF7489B00984974 /* Frameworks */,
+				B854DFD01EF7489B00984974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B854DFD41EF7489B00984974 /* PBXTargetDependency */,
+			);
+			name = LeafViewerTests;
+			productName = LeafViewerTests;
+			productReference = B854DFD21EF7489B00984974 /* LeafViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B854DFDC1EF7489B00984974 /* LeafViewerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B854DFEC1EF7489B00984974 /* Build configuration list for PBXNativeTarget "LeafViewerUITests" */;
+			buildPhases = (
+				B854DFD91EF7489B00984974 /* Sources */,
+				B854DFDA1EF7489B00984974 /* Frameworks */,
+				B854DFDB1EF7489B00984974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B854DFDF1EF7489B00984974 /* PBXTargetDependency */,
+			);
+			name = LeafViewerUITests;
+			productName = LeafViewerUITests;
+			productReference = B854DFDD1EF7489B00984974 /* LeafViewerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B854DFB91EF7489B00984974 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = hideki;
+				TargetAttributes = {
+					B854DFC01EF7489B00984974 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					B854DFD11EF7489B00984974 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B854DFC01EF7489B00984974;
+					};
+					B854DFDC1EF7489B00984974 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B854DFC01EF7489B00984974;
+					};
+				};
+			};
+			buildConfigurationList = B854DFBC1EF7489B00984974 /* Build configuration list for PBXProject "LeafViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B854DFB81EF7489B00984974;
+			productRefGroup = B854DFC21EF7489B00984974 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B854DFC01EF7489B00984974 /* LeafViewer */,
+				B854DFD11EF7489B00984974 /* LeafViewerTests */,
+				B854DFDC1EF7489B00984974 /* LeafViewerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B854DFBF1EF7489B00984974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B854DFC91EF7489B00984974 /* Assets.xcassets in Resources */,
+				B854DFCC1EF7489B00984974 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B854DFD01EF7489B00984974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B854DFDB1EF7489B00984974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B854DFBD1EF7489B00984974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B854DFC71EF7489B00984974 /* ViewController.swift in Sources */,
+				B854DFC51EF7489B00984974 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B854DFCE1EF7489B00984974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B854DFD71EF7489B00984974 /* LeafViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B854DFD91EF7489B00984974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B854DFE21EF7489B00984974 /* LeafViewerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B854DFD41EF7489B00984974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B854DFC01EF7489B00984974 /* LeafViewer */;
+			targetProxy = B854DFD31EF7489B00984974 /* PBXContainerItemProxy */;
+		};
+		B854DFDF1EF7489B00984974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B854DFC01EF7489B00984974 /* LeafViewer */;
+			targetProxy = B854DFDE1EF7489B00984974 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B854DFCA1EF7489B00984974 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B854DFCB1EF7489B00984974 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B854DFE41EF7489B00984974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B854DFE51EF7489B00984974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		B854DFE71EF7489B00984974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LeafViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasust.LeafViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B854DFE81EF7489B00984974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LeafViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasust.LeafViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B854DFEA1EF7489B00984974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LeafViewerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasust.LeafViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeafViewer.app/Contents/MacOS/LeafViewer";
+			};
+			name = Debug;
+		};
+		B854DFEB1EF7489B00984974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LeafViewerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasust.LeafViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeafViewer.app/Contents/MacOS/LeafViewer";
+			};
+			name = Release;
+		};
+		B854DFED1EF7489B00984974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LeafViewerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasust.LeafViewerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LeafViewer;
+			};
+			name = Debug;
+		};
+		B854DFEE1EF7489B00984974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LeafViewerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasust.LeafViewerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LeafViewer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B854DFBC1EF7489B00984974 /* Build configuration list for PBXProject "LeafViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B854DFE41EF7489B00984974 /* Debug */,
+				B854DFE51EF7489B00984974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B854DFE61EF7489B00984974 /* Build configuration list for PBXNativeTarget "LeafViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B854DFE71EF7489B00984974 /* Debug */,
+				B854DFE81EF7489B00984974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B854DFE91EF7489B00984974 /* Build configuration list for PBXNativeTarget "LeafViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B854DFEA1EF7489B00984974 /* Debug */,
+				B854DFEB1EF7489B00984974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B854DFEC1EF7489B00984974 /* Build configuration list for PBXNativeTarget "LeafViewerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B854DFED1EF7489B00984974 /* Debug */,
+				B854DFEE1EF7489B00984974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B854DFB91EF7489B00984974 /* Project object */;
+}
