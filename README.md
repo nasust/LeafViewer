@@ -1,6 +1,6 @@
 # LeafViewer
 
-LeafViewerはシンプルなMac用画像ビューワーです。
+LeafViewerはシンプルなMac用画像ビューアです。
 
 ## 主な機能
 
@@ -24,6 +24,5 @@ GPL3
 
 ## 公開ページ
 
-[LeafViewer](http://nasust.hatenablog.com/leafviewer)
-
+[LeafViewer](http://nasust.hatenablog.com/entry/leafviewer)
 
