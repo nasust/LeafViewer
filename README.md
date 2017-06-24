@@ -21,3 +21,9 @@ LeafViewerはシンプルなMac用画像ビューワーです。
 ## ライセンス
 
 GPL3
+
+## 公開ページ
+
+[LeafViewer](http://nasust.hatenablog.com/leafviewer)
+
+
