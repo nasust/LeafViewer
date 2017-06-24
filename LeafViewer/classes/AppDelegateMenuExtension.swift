@@ -106,10 +106,9 @@ extension AppDelegate {
     func menuItemActionOpenFile(sender: NSMenuItem) {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
-        openPanel.canChooseDirectories = false
+        openPanel.canChooseDirectories = true
         openPanel.canCreateDirectories = false
         openPanel.canChooseFiles = true
-        openPanel.allowedFileTypes = NSImage.imageTypes()
         openPanel.allowedFileTypes = ["jpg", "jpeg", "gif", "png", "bmp"]
         openPanel.begin(completionHandler: { (result) -> Void in
             if result == NSFileHandlingPanelOKButton {

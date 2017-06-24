@@ -10,11 +10,35 @@ class ImageFileSystemManager: ImageFileManagerProto {
     static let typeExtensions: [String] = ["jpg", "jpeg", "png", "gif", "bmp"]
 
     static func isTargetFile(fileName: String) -> Bool {
-        for fileType in typeExtensions {
-            if NSString(string: fileName).pathExtension.caseInsensitiveCompare(fileType) == .orderedSame {
-                return true
+
+        let fileManager = FileManager.default
+        var isDir: ObjCBool = false
+
+        if fileManager.fileExists(atPath: fileName, isDirectory: &isDir) {
+            if isDir.boolValue {
+
+                do {
+                    let files = try fileManager.contentsOfDirectory(atPath: fileName)
+                    for file in files {
+                        for fileType in ImageFileSystemManager.typeExtensions {
+                            if NSString(string: file).pathExtension.caseInsensitiveCompare(fileType) == .orderedSame {
+                                return true
+                            }
+                        }
+                    }
+                } catch {
+                    return false
+                }
+
+            } else {
+                for fileType in typeExtensions {
+                    if NSString(string: fileName).pathExtension.caseInsensitiveCompare(fileType) == .orderedSame {
+                        return true
+                    }
+                }
             }
         }
+
         return false
     }
 
