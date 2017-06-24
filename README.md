@@ -1,6 +1,6 @@
 # LeafViewer
 
-LeafViewerはシンプルなMac用画像ビューワーです。
+LeafViewerはシンプルなMac用画像ビューアです。
 
 ## 主な機能
 
