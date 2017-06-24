@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="vdc-Wh-TIR">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="5QI-aG-G2z">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="vdc-Wh-TIR" customClass="ImageWindowController" customModule="LeafViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" tabbingMode="disallowed" id="E3W-n0-eo0">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="307" y="509" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <value key="minSize" type="size" width="480" height="270"/>
+                        <toolbar key="toolbar" implicitIdentifier="E8DC57D3-2E13-45F4-B5A6-4EEE3871284D" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="small" id="Owc-Ui-SeT">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="28D7EBBA-9F19-41A8-8C96-8D533E144166" label="前へ" paletteLabel="前へ" tag="-1" image="ToolBarIcon_Prev" id="3cz-mb-3vZ">
+                                    <connections>
+                                        <action selector="toolBarPrev:" target="vdc-Wh-TIR" id="WPu-lu-pIL"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="15453A4E-1375-4BA9-A54A-E40F8EB5B86C" label="次へ" paletteLabel="次へ" tag="-1" image="ToolBarIcon_Next" id="wGJ-IU-Tli">
+                                    <connections>
+                                        <action selector="toolBarNext:" target="vdc-Wh-TIR" id="eiH-Mx-hEs"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="FAF-hM-lnD"/>
+                                <toolbarItem implicitItemIdentifier="57AFD201-0237-4471-BB70-9DEBC541965E" label="縮小" paletteLabel="縮小" tag="-1" image="ToolBarIcon_Small" id="Ec3-BS-oWe">
+                                    <connections>
+                                        <action selector="toolBarSmall:" target="vdc-Wh-TIR" id="Wc0-Qu-pa6"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="67685C21-6BD2-41BC-8F6C-CA4FBF825B64" label="拡大" paletteLabel="拡大" tag="-1" image="ToolBarIcon_Zoom" id="1LS-p6-Inb">
+                                    <connections>
+                                        <action selector="toolBarZoom:" target="vdc-Wh-TIR" id="snb-0H-Bkv"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="HWs-V2-hBH"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="3cz-mb-3vZ"/>
+                                <toolbarItem reference="wGJ-IU-Tli"/>
+                                <toolbarItem reference="FAF-hM-lnD"/>
+                                <toolbarItem reference="Ec3-BS-oWe"/>
+                                <toolbarItem reference="1LS-p6-Inb"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                    </window>
+                    <connections>
+                        <outlet property="imageToolBar" destination="Owc-Ui-SeT" id="SBm-Pg-D6K"/>
+                        <segue destination="d65-d3-lyH" kind="relationship" relationship="window.shadowedContentViewController" id="hhY-9C-74N"/>
+                    </connections>
+                </windowController>
+                <customObject id="8u4-Ch-drQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="166"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="vHf-W3-VGv">
+            <objects>
+                <viewController id="d65-d3-lyH" customClass="ImageViewController" customModule="LeafViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="CvZ-st-x4g">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-zv-R4J" customClass="ImageScrollView" customModule="LeafViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <clipView key="contentView" ambiguous="YES" id="v34-9Y-WRc" customClass="CenteredClipView" customModule="LeafViewer" customModuleProvider="target">
+                                    <rect key="frame" x="1" y="1" width="478" height="268"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJn-ep-4QS">
+                                            <rect key="frame" x="15" y="15" width="463" height="253"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="mini" horizontal="YES" id="qyr-vi-rZ6">
+                                    <rect key="frame" x="1" y="-13" width="0.0" height="14"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" controlSize="mini" horizontal="NO" id="E6c-oF-Sha">
+                                    <rect key="frame" x="-13" y="1" width="14" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Jva-zv-R4J" id="VIt-8n-Fmk"/>
+                    </connections>
+                </viewController>
+                <customObject id="QYj-sI-cmh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ToolBarIcon_Next" width="32" height="32"/>
+        <image name="ToolBarIcon_Prev" width="32" height="32"/>
+        <image name="ToolBarIcon_Small" width="32" height="32"/>
+        <image name="ToolBarIcon_Zoom" width="32" height="32"/>
+    </resources>
+</document>

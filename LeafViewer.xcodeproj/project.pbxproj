@@ -7,12 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B854DFC51EF7489B00984974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854DFC41EF7489B00984974 /* AppDelegate.swift */; };
-		B854DFC71EF7489B00984974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854DFC61EF7489B00984974 /* ViewController.swift */; };
+		B76EA02D552ACC1FBEB1E3BA /* ImageFileSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA19E0224343B2BCC6CC8 /* ImageFileSystemManager.swift */; };
+		B76EA124D426940A4195EC61 /* ImageFileManagerProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA595517C80DDE9EB2DCC /* ImageFileManagerProto.swift */; };
+		B76EA180E4338077CD97D5D0 /* ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EADDE42D010F6C4E0D134 /* ViewMode.swift */; };
+		B76EA219EF7C1D6073BF232D /* JustWindowCalculationViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA88601818B93E1FE4A39 /* JustWindowCalculationViewSize.swift */; };
+		B76EA28CDD6104250FCF4DED /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EACC3FF4EAC1026D26EAA /* ImageScrollView.swift */; };
+		B76EA3FC0D74D8C45CFD4264 /* AutomaticZoomCalculationViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA0528DECE5C24D9ECE44 /* AutomaticZoomCalculationViewSize.swift */; };
+		B76EA4CE8A184FFCB616F107 /* ImageWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA23DDC363E462367D7AE /* ImageWindowController.swift */; };
+		B76EA5E4DCCB0914AD5B849B /* AppDelegateMenuExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EABB6F8949F31DAA4AC50 /* AppDelegateMenuExtension.swift */; };
+		B76EA6125809C10B319BC6F5 /* CenteredClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EAA9FE31CDD744A3DACDD /* CenteredClipView.swift */; };
+		B76EA623D8D0862634007156 /* ImageWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EAC4C3F6B400EF5510DA2 /* ImageWebView.swift */; };
+		B76EA6A51550441F695ED361 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA0566848A1EC26838C9E /* ImageViewController.swift */; };
+		B76EA75CC62FE5E421DE38D1 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA5D152E7AE93D84168BA /* App.swift */; };
+		B76EA7786C6F84C4FCC29C18 /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EAD0936D2723ECB124BF1 /* ImageFileManager.swift */; };
+		B76EA9365730B038EB666079 /* NSImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EAA8D817EC46A180B5754 /* NSImageExtension.swift */; };
+		B76EA9FA7AEAC20FE020948D /* ImageCalculationViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA6C038B7467016722AE2 /* ImageCalculationViewSize.swift */; };
+		B76EABE5D06310C2BF18B232 /* OriginalCalculationViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA97949447F0F3033B04C /* OriginalCalculationViewSize.swift */; };
+		B76EAC16A205E0EFFBDB3B70 /* ReduceDisplayLargerScreenCalculationViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EAEAD21C1B87493A914B2 /* ReduceDisplayLargerScreenCalculationViewSize.swift */; };
+		B76EAC856B5CBF31AAA73BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EA36705BEE6460B030989 /* AppDelegate.swift */; };
+		B76EAFCEF324410FCEE5DF2C /* CalculationViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76EAFA16E09B8912048B79F /* CalculationViewSize.swift */; };
 		B854DFC91EF7489B00984974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B854DFC81EF7489B00984974 /* Assets.xcassets */; };
 		B854DFCC1EF7489B00984974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B854DFCA1EF7489B00984974 /* Main.storyboard */; };
 		B854DFD71EF7489B00984974 /* LeafViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854DFD61EF7489B00984974 /* LeafViewerTests.swift */; };
 		B854DFE21EF7489B00984974 /* LeafViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854DFE11EF7489B00984974 /* LeafViewerUITests.swift */; };
+		B854E02B1EF7DDF900984974 /* Image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B854E02A1EF7DDF900984974 /* Image.storyboard */; };
+		B854E02E1EFA3F1700984974 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854E02D1EFA3F1700984974 /* ImageIO.framework */; };
+		B854E0301EFA706100984974 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854E02F1EFA706100984974 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +53,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B76EA0528DECE5C24D9ECE44 /* AutomaticZoomCalculationViewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomaticZoomCalculationViewSize.swift; sourceTree = "<group>"; };
+		B76EA0566848A1EC26838C9E /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		B76EA19E0224343B2BCC6CC8 /* ImageFileSystemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFileSystemManager.swift; sourceTree = "<group>"; };
+		B76EA23DDC363E462367D7AE /* ImageWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWindowController.swift; sourceTree = "<group>"; };
+		B76EA36705BEE6460B030989 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B76EA595517C80DDE9EB2DCC /* ImageFileManagerProto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFileManagerProto.swift; sourceTree = "<group>"; };
+		B76EA5D152E7AE93D84168BA /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		B76EA6C038B7467016722AE2 /* ImageCalculationViewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCalculationViewSize.swift; sourceTree = "<group>"; };
+		B76EA88601818B93E1FE4A39 /* JustWindowCalculationViewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustWindowCalculationViewSize.swift; sourceTree = "<group>"; };
+		B76EA97949447F0F3033B04C /* OriginalCalculationViewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalCalculationViewSize.swift; sourceTree = "<group>"; };
+		B76EAA8D817EC46A180B5754 /* NSImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSImageExtension.swift; sourceTree = "<group>"; };
+		B76EAA9FE31CDD744A3DACDD /* CenteredClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredClipView.swift; sourceTree = "<group>"; };
+		B76EABB6F8949F31DAA4AC50 /* AppDelegateMenuExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateMenuExtension.swift; sourceTree = "<group>"; };
+		B76EAC4C3F6B400EF5510DA2 /* ImageWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWebView.swift; sourceTree = "<group>"; };
+		B76EACC3FF4EAC1026D26EAA /* ImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		B76EAD0936D2723ECB124BF1 /* ImageFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
+		B76EADDE42D010F6C4E0D134 /* ViewMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMode.swift; sourceTree = "<group>"; };
+		B76EAEAD21C1B87493A914B2 /* ReduceDisplayLargerScreenCalculationViewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceDisplayLargerScreenCalculationViewSize.swift; sourceTree = "<group>"; };
+		B76EAFA16E09B8912048B79F /* CalculationViewSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationViewSize.swift; sourceTree = "<group>"; };
 		B854DFC11EF7489B00984974 /* LeafViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeafViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B854DFC41EF7489B00984974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B854DFC61EF7489B00984974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B854DFC81EF7489B00984974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B854DFCB1EF7489B00984974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B854DFCD1EF7489B00984974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +82,9 @@
 		B854DFDD1EF7489B00984974 /* LeafViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeafViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B854DFE11EF7489B00984974 /* LeafViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafViewerUITests.swift; sourceTree = "<group>"; };
 		B854DFE31EF7489B00984974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B854E02A1EF7DDF900984974 /* Image.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Image.storyboard; sourceTree = "<group>"; };
+		B854E02D1EFA3F1700984974 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B854E02F1EFA706100984974 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B854E0301EFA706100984974 /* WebKit.framework in Frameworks */,
+				B854E02E1EFA3F1700984974 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +114,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B76EA8F52DC61252EFDAC064 /* ViewMode */ = {
+			isa = PBXGroup;
+			children = (
+				B76EAFA16E09B8912048B79F /* CalculationViewSize.swift */,
+				B76EADDE42D010F6C4E0D134 /* ViewMode.swift */,
+				B76EA0528DECE5C24D9ECE44 /* AutomaticZoomCalculationViewSize.swift */,
+				B76EA97949447F0F3033B04C /* OriginalCalculationViewSize.swift */,
+				B76EA88601818B93E1FE4A39 /* JustWindowCalculationViewSize.swift */,
+				B76EAEAD21C1B87493A914B2 /* ReduceDisplayLargerScreenCalculationViewSize.swift */,
+				B76EA6C038B7467016722AE2 /* ImageCalculationViewSize.swift */,
+			);
+			path = ViewMode;
+			sourceTree = "<group>";
+		};
+		B76EAF216D25C316ABEA72D8 /* ImageFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				B76EAD0936D2723ECB124BF1 /* ImageFileManager.swift */,
+				B76EA19E0224343B2BCC6CC8 /* ImageFileSystemManager.swift */,
+				B76EA595517C80DDE9EB2DCC /* ImageFileManagerProto.swift */,
+			);
+			path = ImageFileManager;
+			sourceTree = "<group>";
+		};
+		B76EAFDE38504901D0E089AA /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				B76EAF216D25C316ABEA72D8 /* ImageFileManager */,
+				B76EA8F52DC61252EFDAC064 /* ViewMode */,
+				B76EA0566848A1EC26838C9E /* ImageViewController.swift */,
+				B76EA23DDC363E462367D7AE /* ImageWindowController.swift */,
+				B76EAA9FE31CDD744A3DACDD /* CenteredClipView.swift */,
+				B76EAA8D817EC46A180B5754 /* NSImageExtension.swift */,
+				B76EAC4C3F6B400EF5510DA2 /* ImageWebView.swift */,
+				B76EACC3FF4EAC1026D26EAA /* ImageScrollView.swift */,
+				B76EA5D152E7AE93D84168BA /* App.swift */,
+				B76EABB6F8949F31DAA4AC50 /* AppDelegateMenuExtension.swift */,
+				B76EA36705BEE6460B030989 /* AppDelegate.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		B854DFB81EF7489B00984974 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +163,7 @@
 				B854DFD51EF7489B00984974 /* LeafViewerTests */,
 				B854DFE01EF7489B00984974 /* LeafViewerUITests */,
 				B854DFC21EF7489B00984974 /* Products */,
+				B854E02C1EFA3F1600984974 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +180,11 @@
 		B854DFC31EF7489B00984974 /* LeafViewer */ = {
 			isa = PBXGroup;
 			children = (
-				B854DFC41EF7489B00984974 /* AppDelegate.swift */,
-				B854DFC61EF7489B00984974 /* ViewController.swift */,
 				B854DFC81EF7489B00984974 /* Assets.xcassets */,
 				B854DFCA1EF7489B00984974 /* Main.storyboard */,
+				B854E02A1EF7DDF900984974 /* Image.storyboard */,
 				B854DFCD1EF7489B00984974 /* Info.plist */,
+				B76EAFDE38504901D0E089AA /* classes */,
 			);
 			path = LeafViewer;
 			sourceTree = "<group>";
@@ -120,6 +205,15 @@
 				B854DFE31EF7489B00984974 /* Info.plist */,
 			);
 			path = LeafViewerUITests;
+			sourceTree = "<group>";
+		};
+		B854E02C1EFA3F1600984974 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B854E02F1EFA706100984974 /* WebKit.framework */,
+				B854E02D1EFA3F1700984974 /* ImageIO.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +325,7 @@
 			files = (
 				B854DFC91EF7489B00984974 /* Assets.xcassets in Resources */,
 				B854DFCC1EF7489B00984974 /* Main.storyboard in Resources */,
+				B854E02B1EF7DDF900984974 /* Image.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +350,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B854DFC71EF7489B00984974 /* ViewController.swift in Sources */,
-				B854DFC51EF7489B00984974 /* AppDelegate.swift in Sources */,
+				B76EA7786C6F84C4FCC29C18 /* ImageFileManager.swift in Sources */,
+				B76EA02D552ACC1FBEB1E3BA /* ImageFileSystemManager.swift in Sources */,
+				B76EA124D426940A4195EC61 /* ImageFileManagerProto.swift in Sources */,
+				B76EA6A51550441F695ED361 /* ImageViewController.swift in Sources */,
+				B76EA4CE8A184FFCB616F107 /* ImageWindowController.swift in Sources */,
+				B76EA6125809C10B319BC6F5 /* CenteredClipView.swift in Sources */,
+				B76EA9365730B038EB666079 /* NSImageExtension.swift in Sources */,
+				B76EA623D8D0862634007156 /* ImageWebView.swift in Sources */,
+				B76EA28CDD6104250FCF4DED /* ImageScrollView.swift in Sources */,
+				B76EAFCEF324410FCEE5DF2C /* CalculationViewSize.swift in Sources */,
+				B76EA180E4338077CD97D5D0 /* ViewMode.swift in Sources */,
+				B76EA3FC0D74D8C45CFD4264 /* AutomaticZoomCalculationViewSize.swift in Sources */,
+				B76EABE5D06310C2BF18B232 /* OriginalCalculationViewSize.swift in Sources */,
+				B76EA219EF7C1D6073BF232D /* JustWindowCalculationViewSize.swift in Sources */,
+				B76EAC16A205E0EFFBDB3B70 /* ReduceDisplayLargerScreenCalculationViewSize.swift in Sources */,
+				B76EA9FA7AEAC20FE020948D /* ImageCalculationViewSize.swift in Sources */,
+				B76EA75CC62FE5E421DE38D1 /* App.swift in Sources */,
+				B76EA5E4DCCB0914AD5B849B /* AppDelegateMenuExtension.swift in Sources */,
+				B76EAC856B5CBF31AAA73BC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +514,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LeafViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nasust.LeafViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -415,6 +528,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LeafViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nasust.LeafViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -498,6 +612,7 @@
 				B854DFE81EF7489B00984974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B854DFE91EF7489B00984974 /* Build configuration list for PBXNativeTarget "LeafViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +621,7 @@
 				B854DFEB1EF7489B00984974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B854DFEC1EF7489B00984974 /* Build configuration list for PBXNativeTarget "LeafViewerUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +630,7 @@
 				B854DFEE1EF7489B00984974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
