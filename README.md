@@ -24,6 +24,5 @@ GPL3
 
 ## 公開ページ
 
-[LeafViewer](http://nasust.hatenablog.com/leafviewer)
-
+[LeafViewer](http://nasust.hatenablog.com/entry/leafviewer)
 
