@@ -26,5 +26,7 @@ protocol ImageFileManagerProto {
 
     func processFile(fileName: String) -> Bool
 
+    func imageData(fileName: String) -> Data?
+
     static func isTargetFile(fileName: String) -> Bool
 }

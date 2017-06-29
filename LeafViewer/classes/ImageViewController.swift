@@ -61,7 +61,7 @@ class ImageViewController: NSViewController {
                    && image.isAnimationGif() == true {
             let webConfiguration = WKWebViewConfiguration()
             let webView = ImageWebView(frame: NSMakeRect(0, 0, floor(targetImageViewWidth), floor(targetImageViewHeight)), configuration: webConfiguration)
-            let gifData = NSData(contentsOfFile: ImageFileManager.shared.currentImageFileName!)
+            let gifData = ImageFileManager.shared.imageData(fileName: ImageFileManager.shared.currentImageFileName!)
 
             //手抜きアニメーションGIF実装
             let htmlString = "<body style='margin:0px;padding:0px'><img src='data:image/gif;base64," + gifData!.base64EncodedString() + "' width='100%' height='100%' style=`margin:0px;padding:0px;`></body>"

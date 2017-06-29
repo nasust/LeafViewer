@@ -23,7 +23,7 @@ class ImageFileManager: ImageFileManagerProto {
     }
 
     var currentImageFileName: String? {
-        get{
+        get {
             return self.imageFileManagerImpl!.currentImageFileName
         }
     }
@@ -48,11 +48,11 @@ class ImageFileManager: ImageFileManagerProto {
         return self.imageFileManagerImpl!.doPrev()
     }
 
-    func doFirst() -> Bool{
+    func doFirst() -> Bool {
         return self.imageFileManagerImpl!.doFirst()
     }
 
-    func doLast() -> Bool{
+    func doLast() -> Bool {
         return self.imageFileManagerImpl!.doLast()
     }
 
@@ -64,14 +64,20 @@ class ImageFileManager: ImageFileManagerProto {
         return self.imageFileManagerImpl!.hasPrev()
     }
 
+    func imageData(fileName: String) -> Data?{
+        return self.imageFileManagerImpl!.imageData(fileName: fileName)
+    }
+
     static func isTargetFile(fileName: String) -> Bool {
         return false
     }
 
-    func processFile(fileName: String) -> Bool{
+    func processFile(fileName: String) -> Bool {
         self.imageFileManagerImpl = nil
         if ImageFileSystemManager.isTargetFile(fileName: fileName) {
             self.imageFileManagerImpl = ImageFileSystemManager()
+        } else if (ImageZipFileManager.isTargetFile(fileName: fileName)) {
+            self.imageFileManagerImpl = ImageZipFileManager()
         }
         if self.imageFileManagerImpl != nil {
             return self.imageFileManagerImpl!.processFile(fileName: fileName)

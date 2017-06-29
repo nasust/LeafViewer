@@ -194,4 +194,9 @@ class ImageFileSystemManager: ImageFileManagerProto {
 
         return true
     }
+
+    func imageData(fileName: String) -> Data?{
+        return NSData(contentsOfFile: fileName) as Data!
+    }
+
 }
