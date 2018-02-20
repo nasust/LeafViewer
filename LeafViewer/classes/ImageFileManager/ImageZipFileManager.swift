@@ -22,7 +22,7 @@ class ImageZipFileManager: ImageFileManagerProto {
             return false
         }
 
-        defer{
+        defer {
             do {
                 try unZipper.close()
             } catch {
@@ -63,7 +63,7 @@ class ImageZipFileManager: ImageFileManagerProto {
             return false
         }
 
-        defer{
+        defer {
             do {
                 try unZipper.close()
             } catch {
@@ -118,7 +118,7 @@ class ImageZipFileManager: ImageFileManagerProto {
                 return nil
             }
 
-            defer{
+            defer {
                 do {
                     try unZipper.close()
                 } catch {

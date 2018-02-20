@@ -189,7 +189,7 @@ class ImageFileSystemManager: ImageFileManagerProto {
             return false
         }
 
-        self.directoryImageFiles = currentDirectoryImageFiles
+        self.directoryImageFiles = currentDirectoryImageFiles.sorted()
         self.currentImageIndex = 0
 
         return true
