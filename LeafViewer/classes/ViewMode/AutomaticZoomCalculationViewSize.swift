@@ -15,10 +15,7 @@ class AutomaticZoomCalculationViewSize : CalculationViewSize {
         let windowVisibleFrame = NSScreen.main()!.visibleFrame;
         //todo current screen
 
-        var headerHeight = window.frame.size.height - window.contentView!.frame.size.height
-        if window.styleMask.contains(.fullScreen) && window.toolbar!.isVisible {
-            headerHeight = 35
-        }
+        let headerHeight = window.frame.size.height - window.contentView!.frame.size.height
 
         NSLog("header height: %f", headerHeight)
 

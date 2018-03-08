@@ -6,7 +6,7 @@
 import Foundation
 import Cocoa
 
-class ImageWindowController: NSWindowController {
+class ImageWindowController: NSWindowController, NSWindowDelegate {
 
     @IBOutlet weak var imageToolBar: NSToolbar!
 
@@ -20,12 +20,17 @@ class ImageWindowController: NSWindowController {
 
     override func windowWillLoad() {
         super.windowWillLoad()
-
-
     }
 
     override func windowDidLoad() {
         super.windowDidLoad()
+
+        self.window!.toolbar!.isVisible = App.hideToolBar == false;
+        self.window!.titlebarAppearsTransparent = true
+        self.window!.titleVisibility = .hidden
+        self.window!.styleMask = [.fullSizeContentView, .resizable, .closable, .titled, .miniaturizable]
+
+        self.window!.delegate = self;
 
         let controller = self.contentViewController as! ImageViewController
         controller.window = self.window
@@ -36,11 +41,38 @@ class ImageWindowController: NSWindowController {
         DispatchQueue.main.async { //少しだけ遅らせないとToolBarのvisibleの判定が変になる
             self.refreshImage()
         }
+
+    }
+
+    func window(_ window: NSWindow, willUseFullScreenPresentationOptions proposedOptions: NSApplicationPresentationOptions = []) -> NSApplicationPresentationOptions {
+        return [.autoHideToolbar, proposedOptions]
+    }
+
+    func windowDidEnterFullScreen(_ notification: Notification) {
+        self.refreshImage()
+    }
+
+    func windowDidExitFullScreen(_ notification: Notification) {
+        self.refreshImage()
     }
 
     override func scrollWheel(with event: NSEvent) {
         //tool bar scroll
         self.changeImage(event: event)
+    }
+
+    override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
+        if event.clickCount >= 1 {
+            let x = event.locationInWindow.x;
+            if self.window!.frame.width / 2 < x {
+                NSLog("mouse down next")
+                _ = self.nextImage()
+            } else {
+                NSLog("mouse down prev")
+                _ = self.prevImage()
+            }
+        }
     }
 
     func contentsScrollWheel(with event: NSEvent) {
@@ -53,14 +85,14 @@ class ImageWindowController: NSWindowController {
     func changeImage(event: NSEvent) {
         if (event.deltaY <= -1.0) {
             let currentDate = NSDate()
-            if ((currentDate.timeIntervalSince1970 - changeTime.timeIntervalSince1970) > 0.2) {
+            if ((currentDate.timeIntervalSince1970 - changeTime.timeIntervalSince1970) > 0.05) {
                 if self.nextImage() {
                     self.changeTime = NSDate()
                 }
             }
         } else if (event.deltaY >= 1.0) {
             let currentDate = NSDate()
-            if ((currentDate.timeIntervalSince1970 - changeTime.timeIntervalSince1970) > 0.2) {
+            if ((currentDate.timeIntervalSince1970 - changeTime.timeIntervalSince1970) > 0.05) {
                 if self.prevImage() {
                     self.changeTime = NSDate()
                 }
@@ -77,9 +109,6 @@ class ImageWindowController: NSWindowController {
         }
 
         let windowFrame = self.window!.frame
-        let headerHeight = self.window!.toolbar!.isVisible ? CGFloat(56) : CGFloat(22)
-
-        NSLog("header height window : %f", headerHeight)
 
         var width = windowFrame.size.width
         var height = windowFrame.size.height
@@ -88,7 +117,7 @@ class ImageWindowController: NSWindowController {
 
         if App.configViewMode == ViewMode.automaticZoom {
             width = controller.imageView!.frame.width
-            height = controller.imageView!.frame.height + headerHeight
+            height = controller.imageView!.frame.height
 
         } else if App.configViewMode == ViewMode.original || App.configViewMode == ViewMode.reduceDisplayLargerScreen {
             if windowVisibleFrame.width > controller.imageView!.frame.width {
@@ -97,7 +126,7 @@ class ImageWindowController: NSWindowController {
                 width = windowVisibleFrame.width
             }
             if windowVisibleFrame.height > controller.imageView!.frame.height {
-                height = controller.imageView!.frame.height + headerHeight
+                height = controller.imageView!.frame.height
             } else {
                 height = windowVisibleFrame.height
             }
@@ -109,7 +138,7 @@ class ImageWindowController: NSWindowController {
         self.window!.setFrame(NSMakeRect(x, y, width, height), display: true, animate: false)
 
         self.window!.title = NSString(string: ImageFileManager.shared.currentImageFileName!).lastPathComponent
-                + " " + String(ImageFileManager.shared.currentIndex + 1) + "/" + String(ImageFileManager.shared.totalCount);
+            + " " + String(ImageFileManager.shared.currentIndex + 1) + "/" + String(ImageFileManager.shared.totalCount);
 
         if App.configIsCenterWindow {
             self.window!.center()

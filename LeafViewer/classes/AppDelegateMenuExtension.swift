@@ -15,45 +15,45 @@ extension AppDelegate {
 
             switch menuItem.tag {
             case 1: break
-            case 2://file
+            case 2: //file
                 if let fileMenu = menuItem.submenu {
                     for fileMenuItem in fileMenu.items {
                         switch fileMenuItem.tag {
-                        case 1://ファイルを開く
+                        case 1: //ファイルを開く
                             fileMenuItem.action = #selector(AppDelegate.menuItemActionOpenFile(sender:))
-                        case 2://最近のファイルを開く
+                        case 2: //最近のファイルを開く
                             self.setupMenuItemRecentOpenFile()
                         default: break;
                         }
                     }
                 }
-            case 3://View
+            case 3: //View
                 if let viewMenu = menuItem.submenu {
                     for viewMenuItem in viewMenu.items {
 
                         switch viewMenuItem.tag {
-                        case 1://表示オプション
+                        case 1: //表示オプション
                             if let viewOptionMenu = viewMenuItem.submenu {
                                 for viewOptionMenuItem in viewOptionMenu.items {
 
 
                                     switch viewOptionMenuItem.tag {
-                                    case 1://ウィンドウを画面の中央に表示する
+                                    case 1: //ウィンドウを画面の中央に表示する
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionCenterWindow(sender:))
                                         viewOptionMenuItem.state = App.configIsCenterWindow ? NSOnState : NSOffState
-                                    case 2://実際のサイズ
+                                    case 2: //実際のサイズ
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionOriginalSize(sender:))
                                         viewOptionMenuItem.state = App.configViewMode == ViewMode.original ? NSOnState : NSOffState
 
-                                    case 3://ウィンドウに合わせる
+                                    case 3: //ウィンドウに合わせる
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionJustWindow(sender:))
                                         viewOptionMenuItem.state = App.configViewMode == ViewMode.justWindow ? NSOnState : NSOffState
 
-                                    case 4://画面に合わせる
+                                    case 4: //画面に合わせる
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionAutomaticZoom(sender:))
                                         viewOptionMenuItem.state = App.configViewMode == ViewMode.automaticZoom ? NSOnState : NSOffState
 
-                                    case 5://画面より大きい場合縮小する
+                                    case 5: //画面より大きい場合縮小する
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionReduceDisplayLargerScreen(sender:))
                                         viewOptionMenuItem.state = App.configViewMode == ViewMode.reduceDisplayLargerScreen ? NSOnState : NSOffState
 
@@ -63,23 +63,24 @@ extension AppDelegate {
                                 }
                             }
 
-                        case 2://次へ
+                        case 2: //次へ
                             viewMenuItem.action = #selector(AppDelegate.menuItemActionNext(sender:))
-                        case 3://前へ
+                        case 3: //前へ
                             viewMenuItem.action = #selector(AppDelegate.menuItemActionPrev(sender:))
-                        case 4://先頭へ
+                        case 4: //先頭へ
                             viewMenuItem.action = #selector(AppDelegate.menuItemActionFirst(sender:))
-                        case 5://最後へ
+                        case 5: //最後へ
                             viewMenuItem.action = #selector(AppDelegate.menuItemActionLast(sender:))
-                        case 6://実際のサイズ
+                        case 6: //実際のサイズ
                             viewMenuItem.action = #selector(AppDelegate.menuItemActionDoOriginalSize(sender:))
-                        case 7://拡大
+                        case 7: //拡大
                             viewMenuItem.action = #selector(AppDelegate.menuItemActionZoom(sender:))
-                        case 8://縮小
+                        case 8: //縮小
                             viewMenuItem.action = #selector(AppDelegate.menuItemActionReduction(sender:))
-                        case 9://ツールバーを表示する
+                        case 9: //ツールバーを表示する
                             viewMenuItem.action = #selector(AppDelegate.menuItemActionShowToolBar(sender:))
-                        case 10:break//フルスクリーン
+                            viewMenuItem.title = App.hideToolBar ? "ツールバーを表示する" : "ツールバーを隠す"
+                        case 10: break//フルスクリーン
                         default: break
                         }
 
@@ -91,12 +92,12 @@ extension AppDelegate {
                         switch helpMenuItem.tag {
                         case 1:
                             helpMenuItem.action = #selector(AppDelegate.menuItemActionHelp(sender:))
-                        default:break
+                        default: break
                         }
 
                     }
                 }
-            default:break
+            default: break
             }
 
 
@@ -240,9 +241,11 @@ extension AppDelegate {
         if self.imageWindowController != nil {
             if self.imageWindowController!.window!.toolbar!.isVisible {
                 self.imageWindowController!.window!.toolbar!.isVisible = false
+                App.hideToolBar = true
                 sender.title = "ツールバーを表示する"
             } else {
                 self.imageWindowController!.window!.toolbar!.isVisible = true
+                App.hideToolBar = false
                 sender.title = "ツールバーを隠す"
             }
         }

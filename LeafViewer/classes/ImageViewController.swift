@@ -31,6 +31,7 @@ class ImageViewController: NSViewController {
 
     override func viewDidLayout() {
         super.viewDidLayout()
+        self.scrollView.backgroundColor = NSColor.black
         self.scrollView.borderType = .noBorder
         self.scrollView.scrollWheelEventClosure = { event -> Void in
             self.scrollWheelEventClosure!(event)

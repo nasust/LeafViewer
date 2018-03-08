@@ -9,6 +9,7 @@ class App {
     static let keyViewMode = "viewMode"
     static let keyCenterWindow = "centerWindow"
     static let keyRecentFile = "recentFile"
+    static let keyToolBarHide = "toolBarHide"
 
     static var configIsCenterWindow: Bool {
         get {
@@ -63,6 +64,19 @@ class App {
             }
 
             return recentFiles
+        }
+    }
+
+    static var hideToolBar: Bool {
+        get {
+            if UserDefaults.standard.object(forKey: App.keyToolBarHide) != nil {
+                return UserDefaults.standard.bool(forKey: App.keyToolBarHide)
+            } else {
+                return false
+            }
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: App.keyToolBarHide)
         }
     }
 
