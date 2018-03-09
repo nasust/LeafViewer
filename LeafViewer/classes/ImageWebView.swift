@@ -6,16 +6,17 @@
 import Foundation
 import WebKit
 
-class ImageWebView : WKWebView{
+class ImageWebView: WKWebView {
 
-    var scrollWheelEventClosure : ((NSEvent) -> Void)?
+    var scrollWheelEventClosure: ((NSEvent) -> Void)?
+    var mouseDownEventClosure: ((NSEvent) -> Void)?
 
     override func willOpenMenu(_ menu: NSMenu, with event: NSEvent) {
-        for menuItem in menu.items{
+        for menuItem in menu.items {
             menuItem.isHidden = true
         }
     }
-    
+
     override func becomeFirstResponder() -> Bool {
         return false
     }
@@ -24,5 +25,8 @@ class ImageWebView : WKWebView{
         self.scrollWheelEventClosure!(event)
     }
 
-    
+    override func mouseDown(with event: NSEvent) {
+        self.mouseDownEventClosure!(event)
+    }
+
 }

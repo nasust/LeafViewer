@@ -16,6 +16,7 @@ class ImageViewController: NSViewController {
     var imageView: NSView?
     var window: NSWindow?
     var scrollWheelEventClosure: ((NSEvent) -> Void)?
+    var mouseDownEventClosure: ((NSEvent) -> Void)?
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -70,6 +71,10 @@ class ImageViewController: NSViewController {
             webView.loadHTMLString(htmlString, baseURL: NSURL() as URL)
             webView.scrollWheelEventClosure = { event -> Void in
                 self.scrollWheelEventClosure!(event)
+            }
+            
+            webView.mouseDownEventClosure = { event -> Void in
+                self.mouseDownEventClosure!(event)
             }
 
             self.imageView = webView

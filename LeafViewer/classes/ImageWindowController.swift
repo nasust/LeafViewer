@@ -37,6 +37,10 @@ class ImageWindowController: NSWindowController, NSWindowDelegate {
         controller.scrollWheelEventClosure = { event -> Void in
             self.contentsScrollWheel(with: event)
         }
+        
+        controller.mouseDownEventClosure = { event -> Void in
+            self.mouseDown(with: event)
+        }
 
         DispatchQueue.main.async { //少しだけ遅らせないとToolBarのvisibleの判定が変になる
             self.refreshImage()
