@@ -89,14 +89,14 @@ class ImageWindowController: NSWindowController, NSWindowDelegate {
     func changeImage(event: NSEvent) {
         if (event.deltaY <= -1.0) {
             let currentDate = NSDate()
-            if ((currentDate.timeIntervalSince1970 - changeTime.timeIntervalSince1970) > 0.05) {
+            if ((currentDate.timeIntervalSince1970 - changeTime.timeIntervalSince1970) > 0.1) {
                 if self.nextImage() {
                     self.changeTime = NSDate()
                 }
             }
         } else if (event.deltaY >= 1.0) {
             let currentDate = NSDate()
-            if ((currentDate.timeIntervalSince1970 - changeTime.timeIntervalSince1970) > 0.05) {
+            if ((currentDate.timeIntervalSince1970 - changeTime.timeIntervalSince1970) > 0.1) {
                 if self.prevImage() {
                     self.changeTime = NSDate()
                 }
