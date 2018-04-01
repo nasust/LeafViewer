@@ -9,10 +9,10 @@ import Cocoa
 class AutomaticZoomCalculationViewSize : CalculationViewSize {
     static func calculateTargetImageSize(window: NSWindow, image: NSImage) -> NSSize{
 
-        let margin: CGFloat = window.styleMask.contains(.fullScreen) ? 0 : 30
+        let margin: CGFloat = window.styleMask.contains(NSWindow.StyleMask.fullScreen) ? 0 : 30
         var targetSize = NSMakeSize(0, 0)
 
-        let windowVisibleFrame = NSScreen.main()!.visibleFrame;
+        let windowVisibleFrame = NSScreen.main!.visibleFrame;
         //todo current screen
 
         let headerHeight = window.frame.size.height - window.contentView!.frame.size.height

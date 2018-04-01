@@ -9,7 +9,7 @@ import Cocoa
 extension AppDelegate {
 
     func setupToolBar() {
-        let mainMenu = NSApplication.shared().mainMenu
+        let mainMenu = NSApplication.shared.mainMenu
         for menuItem in mainMenu!.items {
             //menuItem.target = self
 
@@ -40,22 +40,21 @@ extension AppDelegate {
                                     switch viewOptionMenuItem.tag {
                                     case 1: //ウィンドウを画面の中央に表示する
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionCenterWindow(sender:))
-                                        viewOptionMenuItem.state = App.configIsCenterWindow ? NSOnState : NSOffState
-                                    case 2: //実際のサイズ
+                                        viewOptionMenuItem.state = App.configIsCenterWindow ? NSControl.StateValue.on : NSControl.StateValue.off                                    case 2: //実際のサイズ
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionOriginalSize(sender:))
-                                        viewOptionMenuItem.state = App.configViewMode == ViewMode.original ? NSOnState : NSOffState
+                                        viewOptionMenuItem.state = App.configViewMode == ViewMode.original ? NSControl.StateValue.on : NSControl.StateValue.off
 
                                     case 3: //ウィンドウに合わせる
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionJustWindow(sender:))
-                                        viewOptionMenuItem.state = App.configViewMode == ViewMode.justWindow ? NSOnState : NSOffState
+                                        viewOptionMenuItem.state = App.configViewMode == ViewMode.justWindow ? NSControl.StateValue.on : NSControl.StateValue.off
 
                                     case 4: //画面に合わせる
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionAutomaticZoom(sender:))
-                                        viewOptionMenuItem.state = App.configViewMode == ViewMode.automaticZoom ? NSOnState : NSOffState
+                                        viewOptionMenuItem.state = App.configViewMode == ViewMode.automaticZoom ? NSControl.StateValue.on : NSControl.StateValue.off
 
                                     case 5: //画面より大きい場合縮小する
                                         viewOptionMenuItem.action = #selector(AppDelegate.menuItemActionReduceDisplayLargerScreen(sender:))
-                                        viewOptionMenuItem.state = App.configViewMode == ViewMode.reduceDisplayLargerScreen ? NSOnState : NSOffState
+                                        viewOptionMenuItem.state = App.configViewMode == ViewMode.reduceDisplayLargerScreen ? NSControl.StateValue.on : NSControl.StateValue.off
 
                                     default: break;
                                     }
@@ -104,7 +103,7 @@ extension AppDelegate {
         }
     }
 
-    func menuItemActionOpenFile(sender: NSMenuItem) {
+    @objc func menuItemActionOpenFile(sender: NSMenuItem) {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = true
@@ -112,7 +111,7 @@ extension AppDelegate {
         openPanel.canChooseFiles = true
         openPanel.allowedFileTypes = ["jpg", "jpeg", "gif", "png", "bmp"]
         openPanel.begin(completionHandler: { (result) -> Void in
-            if result == NSFileHandlingPanelOKButton {
+            if result.rawValue == NSFileHandlingPanelOKButton {
                 if let url = openPanel.url {
                     self.processImageFile(url.path)
                 }
@@ -132,25 +131,25 @@ extension AppDelegate {
         self.menuItemRecentOpenFile.submenu = recentOpenFileMenu
     }
 
-    func menuItemActionRecentOpenFile(sender: NSMenuItem) {
+    @objc func menuItemActionRecentOpenFile(sender: NSMenuItem) {
         self.processImageFile(sender.title)
     }
 
-    func menuItemActionCenterWindow(sender: NSMenuItem) {
-        if (sender.state == NSOnState) {
-            sender.state = NSOffState
+    @objc func menuItemActionCenterWindow(sender: NSMenuItem) {
+        if (sender.state == NSControl.StateValue.on) {
+            sender.state = NSControl.StateValue.off
             App.configIsCenterWindow = false
         } else {
-            sender.state = NSOnState
+            sender.state = NSControl.StateValue.on
             App.configIsCenterWindow = true
         }
     }
 
-    func menuItemActionOriginalSize(sender: NSMenuItem) {
-        self.menuItemOriginalSize.state = NSOnState
-        self.menuItemJustWindow.state = NSOffState
-        self.menuItemAutomaticZoom.state = NSOffState
-        self.menuItemReduceDisplayLargerScreen.state = NSOffState
+    @objc func menuItemActionOriginalSize(sender: NSMenuItem) {
+        self.menuItemOriginalSize.state = NSControl.StateValue.on
+        self.menuItemJustWindow.state = NSControl.StateValue.off
+        self.menuItemAutomaticZoom.state = NSControl.StateValue.off
+        self.menuItemReduceDisplayLargerScreen.state = NSControl.StateValue.off
 
         App.configViewMode = ViewMode.original
 
@@ -159,11 +158,11 @@ extension AppDelegate {
         }
     }
 
-    func menuItemActionJustWindow(sender: NSMenuItem) {
-        self.menuItemOriginalSize.state = NSOffState
-        self.menuItemJustWindow.state = NSOnState
-        self.menuItemAutomaticZoom.state = NSOffState
-        self.menuItemReduceDisplayLargerScreen.state = NSOffState
+    @objc func menuItemActionJustWindow(sender: NSMenuItem) {
+        self.menuItemOriginalSize.state = NSControl.StateValue.off
+        self.menuItemJustWindow.state = NSControl.StateValue.on
+        self.menuItemAutomaticZoom.state = NSControl.StateValue.off
+        self.menuItemReduceDisplayLargerScreen.state = NSControl.StateValue.off
 
         App.configViewMode = ViewMode.justWindow
         if self.imageWindowController != nil {
@@ -171,11 +170,11 @@ extension AppDelegate {
         }
     }
 
-    func menuItemActionAutomaticZoom(sender: NSMenuItem) {
-        self.menuItemOriginalSize.state = NSOffState
-        self.menuItemJustWindow.state = NSOffState
-        self.menuItemAutomaticZoom.state = NSOnState
-        self.menuItemReduceDisplayLargerScreen.state = NSOffState
+    @objc func menuItemActionAutomaticZoom(sender: NSMenuItem) {
+        self.menuItemOriginalSize.state = NSControl.StateValue.off
+        self.menuItemJustWindow.state = NSControl.StateValue.off
+        self.menuItemAutomaticZoom.state = NSControl.StateValue.on
+        self.menuItemReduceDisplayLargerScreen.state = NSControl.StateValue.off
 
         App.configViewMode = ViewMode.automaticZoom
         if self.imageWindowController != nil {
@@ -183,11 +182,11 @@ extension AppDelegate {
         }
     }
 
-    func menuItemActionReduceDisplayLargerScreen(sender: NSMenuItem) {
-        self.menuItemOriginalSize.state = NSOffState
-        self.menuItemJustWindow.state = NSOffState
-        self.menuItemAutomaticZoom.state = NSOffState
-        self.menuItemReduceDisplayLargerScreen.state = NSOnState
+    @objc func menuItemActionReduceDisplayLargerScreen(sender: NSMenuItem) {
+        self.menuItemOriginalSize.state = NSControl.StateValue.off
+        self.menuItemJustWindow.state = NSControl.StateValue.off
+        self.menuItemAutomaticZoom.state = NSControl.StateValue.off
+        self.menuItemReduceDisplayLargerScreen.state = NSControl.StateValue.on
 
         App.configViewMode = ViewMode.reduceDisplayLargerScreen
         if self.imageWindowController != nil {
@@ -195,49 +194,49 @@ extension AppDelegate {
         }
     }
 
-    func menuItemActionNext(sender: NSMenuItem) {
+    @objc func menuItemActionNext(sender: NSMenuItem) {
         if self.imageWindowController != nil {
             _ = self.imageWindowController!.nextImage()
         }
     }
 
-    func menuItemActionPrev(sender: NSMenuItem) {
+    @objc func menuItemActionPrev(sender: NSMenuItem) {
         if self.imageWindowController != nil {
             _ = self.imageWindowController!.prevImage()
         }
     }
 
-    func menuItemActionFirst(sender: NSMenuItem) {
+    @objc func menuItemActionFirst(sender: NSMenuItem) {
         if self.imageWindowController != nil {
             _ = self.imageWindowController!.firstImage()
         }
     }
 
-    func menuItemActionLast(sender: NSMenuItem) {
+    @objc func menuItemActionLast(sender: NSMenuItem) {
         if self.imageWindowController != nil {
             _ = self.imageWindowController!.lastImage()
         }
     }
 
-    func menuItemActionDoOriginalSize(sender: NSMenuItem) {
+    @objc func menuItemActionDoOriginalSize(sender: NSMenuItem) {
         if self.imageWindowController != nil {
             _ = self.imageWindowController!.originalImageSize()
         }
     }
 
-    func menuItemActionZoom(sender: NSMenuItem) {
+    @objc func menuItemActionZoom(sender: NSMenuItem) {
         if self.imageWindowController != nil {
             _ = self.imageWindowController!.zoomImageSize()
         }
     }
 
-    func menuItemActionReduction(sender: NSMenuItem) {
+    @objc func menuItemActionReduction(sender: NSMenuItem) {
         if self.imageWindowController != nil {
             _ = self.imageWindowController!.smallImageSize()
         }
     }
 
-    func menuItemActionShowToolBar(sender: NSMenuItem) {
+    @objc func menuItemActionShowToolBar(sender: NSMenuItem) {
         if self.imageWindowController != nil {
             if self.imageWindowController!.window!.toolbar!.isVisible {
                 self.imageWindowController!.window!.toolbar!.isVisible = false
@@ -251,9 +250,9 @@ extension AppDelegate {
         }
     }
 
-    func menuItemActionHelp(sender: NSMenuItem) {
+    @objc func menuItemActionHelp(sender: NSMenuItem) {
         let url = URL(string: "http://nasust.hatenablog.com/entry/leafviewer")!
-        NSWorkspace.shared().open(url)
+        NSWorkspace.shared.open(url)
     }
 
 

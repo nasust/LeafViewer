@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func showImageViewer() {
         if self.imageWindowController == nil {
-            let storyBord = NSStoryboard(name: "Image", bundle: nil)
+            let storyBord = NSStoryboard(name: NSStoryboard.Name(rawValue: "Image"), bundle: nil)
             self.imageWindowController = storyBord.instantiateInitialController() as! ImageWindowController?
             self.imageWindowController!.window!.makeKeyAndOrderFront(nil)
         } else {

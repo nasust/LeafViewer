@@ -96,7 +96,7 @@ class ImageViewController: NSViewController {
 
         image.lockFocus()
         srcImage.size = newSize
-        NSGraphicsContext.current()!.imageInterpolation = .high
+        NSGraphicsContext.current!.imageInterpolation = .high
         srcImage.draw(at: NSZeroPoint, from: NSMakeRect(0, 0, newSize.width, newSize.height), operation: .copy, fraction: 1.0)
         image.unlockFocus()
 

@@ -28,7 +28,7 @@ class ImageWindowController: NSWindowController, NSWindowDelegate {
         self.window!.toolbar!.isVisible = App.hideToolBar == false;
         self.window!.titlebarAppearsTransparent = true
         self.window!.titleVisibility = .hidden
-        self.window!.styleMask = [.fullSizeContentView, .resizable, .closable, .titled, .miniaturizable]
+        self.window!.styleMask = [NSWindow.StyleMask.fullSizeContentView, NSWindow.StyleMask.resizable, NSWindow.StyleMask.closable, NSWindow.StyleMask.titled, NSWindow.StyleMask.miniaturizable]
 
         self.window!.delegate = self;
 
@@ -48,8 +48,8 @@ class ImageWindowController: NSWindowController, NSWindowDelegate {
 
     }
 
-    func window(_ window: NSWindow, willUseFullScreenPresentationOptions proposedOptions: NSApplicationPresentationOptions = []) -> NSApplicationPresentationOptions {
-        return [.autoHideToolbar, proposedOptions]
+    func window(_ window: NSWindow, willUseFullScreenPresentationOptions proposedOptions: NSApplication.PresentationOptions = []) -> NSApplication.PresentationOptions {
+        return [NSApplication.PresentationOptions.autoHideToolbar, proposedOptions]
     }
 
     func windowDidEnterFullScreen(_ notification: Notification) {
@@ -108,7 +108,7 @@ class ImageWindowController: NSWindowController, NSWindowDelegate {
         let controller = self.contentViewController as! ImageViewController
         controller.refreshImage()
 
-        if self.window!.styleMask.contains(.fullScreen) {
+        if self.window!.styleMask.contains(NSWindow.StyleMask.fullScreen) {
             return
         }
 
@@ -117,7 +117,7 @@ class ImageWindowController: NSWindowController, NSWindowDelegate {
         var width = windowFrame.size.width
         var height = windowFrame.size.height
 
-        let windowVisibleFrame = NSScreen.main()!.visibleFrame;
+        let windowVisibleFrame = NSScreen.main!.visibleFrame;
 
         if App.configViewMode == ViewMode.automaticZoom {
             width = controller.imageView!.frame.width

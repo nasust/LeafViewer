@@ -12,7 +12,7 @@ class ReduceDisplayLargerScreenCalculationViewSize: CalculationViewSize {
 
         var targetSize = NSMakeSize(0, 0)
 
-        let windowVisibleFrame = NSScreen.main()!.visibleFrame;
+        let windowVisibleFrame = NSScreen.main!.visibleFrame;
         //todo current screen
 
         let headerHeight = window.toolbar!.isVisible ? CGFloat(56) : CGFloat(22)

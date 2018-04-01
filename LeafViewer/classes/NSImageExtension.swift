@@ -12,7 +12,7 @@ extension NSImage {
         let reps = self.representations
         for rep in reps {
             if let bitmapRep : NSBitmapImageRep = rep as? NSBitmapImageRep {
-                let numFrame = bitmapRep.value(forProperty: NSImageFrameCount) as! Int
+                let numFrame = bitmapRep.value(forProperty: NSBitmapImageRep.PropertyKey.frameCount) as! Int
                 return numFrame > 1
             }
         }
